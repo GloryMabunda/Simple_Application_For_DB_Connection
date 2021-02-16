@@ -1,0 +1,65 @@
+﻿@model IEnumerable<CSVWebApplication.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CUST_NAME)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CUST_CITY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WORKING_AREA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CUST_COUNTRY)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GRADE)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PHONE_NO)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CUST_NAME)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CUST_CITY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WORKING_AREA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CUST_COUNTRY)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GRADE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PHONE_NO)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CUST_CODE">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CUST_CODE">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CUST_CODE">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

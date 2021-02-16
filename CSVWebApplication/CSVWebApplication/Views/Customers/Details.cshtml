@@ -1,0 +1,54 @@
+﻿@model CSVWebApplication.Models.Customer
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Customer</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CUST_NAME)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CUST_NAME)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CUST_CITY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CUST_CITY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.WORKING_AREA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.WORKING_AREA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CUST_COUNTRY)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CUST_COUNTRY)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GRADE)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GRADE)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PHONE_NO)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PHONE_NO)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CUST_CODE">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

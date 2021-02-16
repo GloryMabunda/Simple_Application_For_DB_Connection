@@ -1,0 +1,6 @@
+id,number,status,date_created,total,customer_id,couier_company,waybill_no
+23361,9731,on-hold,2020-10-20 22:44,23671.89,70,FastWay,WBN00190292
+23362,9732,processing,2020-10-21 22:44,5000,71,The Courier Guy,WBN00190293
+23363,9733,completed,2020-10-22 22:44,4390,72,CourierIT,WBN00190294
+23364,9734,failed,2020-10-23 22:44,4401,73,PostNet,WBN00190295
+23365,9735,cancelled,2020-10-24 22:44,9900,74,DHL,WBN00190296
